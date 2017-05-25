@@ -24,7 +24,6 @@ public class Uzduotis14 {
         for (int i = 0; i < skaiciai1.length; i++) {
             skaiciai1[i] = sc.nextInt();
         }
-
     }
 
     // apsukame masyva

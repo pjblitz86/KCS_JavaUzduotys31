@@ -22,12 +22,13 @@ public class Uzduotis10 {
         if (skaicius < 1) {
             System.out.println("Bloga ivestis");
         } else {
-            sumavimasIkiN();
-            /* su rekursija
+            //sumavimasIkiN();
+            //arba su rekursija
             int rezultatas = sumavimasRekursija(skaicius);
-            System.out.println("Suma: " + rezultatas);*/
+            System.out.println("Suma: " + rezultatas);
         }
     }
+
     // sumuojame su for
     private void sumavimasIkiN() {
         for (int i = 1; i <= skaicius; i++) {
@@ -36,12 +37,12 @@ public class Uzduotis10 {
         System.out.println("Suma visu naturaliu skaiciu nuo 1 iki " + skaicius + " yra " + suma);
     }
 
-    // kitas var rekursija (kazkas blogai kode)
+    // kitas var rekursija
     private int sumavimasRekursija(int n) {
-        int result;
-        if (n == 1) return 1;
-        result = sumavimasRekursija(n - 1) + n;
-        return result;
+
+        if (n <= 1) return 1;
+        return sumavimasRekursija(n - 1) + n;
+
     }
 }
 

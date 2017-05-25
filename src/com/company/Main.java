@@ -55,6 +55,12 @@ public class Main {
             case 15:
                 new Uzduotis15();
                 break;
+            case 16:
+                new Uzduotis16();
+                break;
+            case 17:
+                new Uzduotis17();
+                break;
 
 
 

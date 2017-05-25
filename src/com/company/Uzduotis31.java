@@ -13,26 +13,36 @@ public class Uzduotis31 {
         isvedimas();
     }
 
-    // nesigauna su ivedimo ilgiu kazkas vienu maziau leidzia ivest
-
-    String[] ivestasMasyvas;
-    String[] mazejantisMasyvas;
+    int[] ivestasMasyvas;
+    int[] mazejantisMasyvas;
 
     // uzklausiam koki kieki nori ivesti i masyva ir nuskaitom i masyva
     private void uzklausimas() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Iveskite kiek skaiciu/zodziu noresite ivesti:");
+        System.out.println("Iveskite kiek skaiciu noresite ivesti:");
         int kiek = sc.nextInt();
-        ivestasMasyvas = new String[kiek];
-        System.out.println("Iveskite " + kiek + " skaiciu/zodziu:");
+        ivestasMasyvas = new int[kiek];
+        System.out.println("Iveskite " + kiek + " skaicius:");
         for (int i = 0; i < ivestasMasyvas.length; i++) {
-            ivestasMasyvas[i] = sc.nextLine();
+            System.out.println("Iveskite " + (i + 1) + " skaiciu");
+            ivestasMasyvas[i] = sc.nextInt();
         }
     }
 
     // surikiuoja gauta masyva mazejimo tvarka
-    private String[] surikiuotiMazejimoTvarka(String[] masyvas) {
-        Arrays.sort(masyvas, Collections.reverseOrder()); // lengviausias budas jei String
+    private int[] surikiuotiMazejimoTvarka(int[] masyvas) {
+        for (int i = 0; i < masyvas.length; i++) {
+            for (int j = 0; j < masyvas.length; j++) {
+                if (masyvas[j] < masyvas[i]) {
+                    int temp;
+                    temp = masyvas[i];
+                    masyvas[i] = masyvas[j];
+                    masyvas[j] = temp;
+                }
+            }
+        }
+        //Arrays.sort(masyvas, Collections.reverseOrder()); // lengviausias budas jei String
+
         return masyvas;
     }
 
