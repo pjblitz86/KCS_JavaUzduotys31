@@ -22,15 +22,16 @@ public class Uzduotis14 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Iveskite 5 sveikus skaicius:");
         for (int i = 0; i < skaiciai1.length; i++) {
+            System.out.println("Iveskite " + (i + 1) + " skaiciu");
             skaiciai1[i] = sc.nextInt();
         }
     }
 
-    // apsukame masyva
+    // apsukame masyva naudodami quicksort
     private int[] apsuktiMasyva(int[] masyvas) {
         for (int i = 0; i < masyvas.length / 2; i++) {
             int temp = masyvas[i];
-            masyvas[i] = masyvas[masyvas.length - i - 1]; // ?????
+            masyvas[i] = masyvas[masyvas.length - i - 1];
             masyvas[masyvas.length - i - 1] = temp;
         }
         // 2 budas: Collections.reverse(ivestasMasyvas)
